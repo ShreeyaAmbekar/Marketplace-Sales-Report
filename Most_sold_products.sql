@@ -1,0 +1,2 @@
+
+select top 10 ROW_NUMBER() over( order by COUNT(o1.ProductID) ) as Ranking, o1.ProductID,p1.model,p1.brand from FK_orders o1  inner join [Flipkart Mobile_dataset] p1 on o1.ProductID = p1.name group by o1.ProductID,p1.model,p1.brand  order by COUNT(o1.ProductID) desc

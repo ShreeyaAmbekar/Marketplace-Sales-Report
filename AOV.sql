@@ -1,0 +1,1 @@
+select fm.brand,SUM(Price)/COUNT(Order_No) as AOV from FK_orders fo inner join [Flipkart Mobile_dataset] fm on fo.ProductID=fm.name group by fm.brand
